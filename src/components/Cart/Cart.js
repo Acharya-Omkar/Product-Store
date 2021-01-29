@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
 import { Badge, Button, ListGroup, Image } from "react-bootstrap";
-import ShoppingCart from "@material-ui/icons/ShoppingCart";
-import DeleteIcon from "@material-ui/icons/Delete";
 
 const Cart = ({
   onOpenCart,
@@ -22,7 +20,7 @@ const Cart = ({
         color="inherit"
       >
         <Badge pill badgeContent={products.length} variant="info">
-          <ShoppingCart />
+          {/* <ShoppingCart /> */}
         </Badge>
       </Button>
       {products.length > 0 ? (

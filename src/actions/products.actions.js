@@ -2,7 +2,7 @@ import { SET_PRODUCTS } from "../types/products.types";
 
 export const fetchProducts = () => {
   return async function (dispatch) {
-    const res = await fetch("https://gorest.co.in/public-api/products", {
+    const res = await fetch("", {
       method: "GET",
     });
     const data = await res.json();
