@@ -1,0 +1,10 @@
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 40px;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(112, 107, 107, 0.103);
+}

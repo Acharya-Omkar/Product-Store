@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./components/Header/Header";
 import Main from "./Main";
 import { Provider } from "react-redux";
 import store from "./store.js";
@@ -7,7 +6,6 @@ import store from "./store.js";
 function App() {
   return (
     <Provider store={store}>
-      <Header />
       <Main />
     </Provider>
   );

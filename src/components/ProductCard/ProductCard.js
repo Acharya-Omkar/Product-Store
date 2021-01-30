@@ -1,29 +1,32 @@
 import React from "react";
-import { Image, Card, Button } from "react-bootstrap";
+import "../ProductCard/ProductCard.css";
+import { Image, Card } from "react-bootstrap";
 
 export default function ProductCard({
   product = null,
-  onAddToCart = () => {},
 }) {
+  var random_number = Math.floor(Math.random() * 5);
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img
+    <Card classname="card" style={{ width: "22rem" }}>
+      <Image
         alt={product.name}
-        src={"https://" + product.imageUrl}
+        src={product.image}
         title={product.name}
-        style={{ padding: 0, height: 200, textAlign: "center" }}
-        imageStyle={{ width: 200, position: "static" }}
-        disableSpinner
+        style={{ padding: 10, height: 200, textAlign: "center" }}
       />
       <Card.Body>
-        <Card.Title>{product.name}</Card.Title>
-        <Card.Text> {product.price.current.text}</Card.Text>
-        <Button size="small" variant="primary" onClick={onAddToCart}>
-          Add to Cart
-        </Button>
-        <Button size="small" variant="secondary">
-          Buy Now
-        </Button>
+        <Card.Title style={{fontWeight:'800'}} >{product.name}</Card.Title>
+        <Card.Text
+          style={{ maxWidth: "300px", fontSize: "14px"}}
+        >
+          {" "}
+          {product.description}
+        </Card.Text>
+        <Card.Text style={{fontWeight:'800'}}> ₹{product.price}</Card.Text>
+        <Card.Text> Rating: {random_number}</Card.Text>
+        {/* <Link to="/products"> */}
+    
+        {/* </Link> */}
       </Card.Body>
     </Card>
   );

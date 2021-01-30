@@ -1,25 +1,10 @@
 import React from "react";
-import Cart from "../Cart/Cart.controller";
-import { Container, Row, Col } from "react-bootstrap";
+import "../Header/Header.css";
 
 const Header = () => {
   return (
-    <div position="static">
-      <Header>
-        <Container
-          container
-          direction="row"
-          alignItems="center"
-          justify="space-between"
-        >
-          <Row>
-            <Col>Footwear Mart</Col>
-          </Row>
-          <Row item spacing={2}>
-            <Cart />
-          </Row>
-        </Container>
-      </Header>
+    <div className="header">
+      <h3>Tailwebs Mart</h3>
     </div>
   );
 };

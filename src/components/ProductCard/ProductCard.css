@@ -1,0 +1,19 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(223, 217, 217);
+  z-index: 1;
+  max-height: 50rem;
+}
+
+.card:hover {
+  transform: scale(1);
+  box-shadow: 5px 5px 15px rgba(105, 105, 105, 0.6);
+}
+
+.card {
+  transition: 0.5s ease;
+  cursor: pointer;
+ 
+}

@@ -1,23 +1,19 @@
 import React from "react";
 import ProductCard from "../ProductCard/ProductCard.controller";
-import { Container, Row, Col } from "react-bootstrap";
+import "../ProductsGrid/ProductsGrid.css";
 
 const renderGridTiles = (products = []) => {
   return products.map((product) => (
-    <Container>
-      <Row>
-        <Col sm={4} key={product.id}>
-          <ProductCard product={product} />
-        </Col>
-      </Row>
-    </Container>
+    <div>
+      <ProductCard product={product} />
+    </div>
   ));
 };
 
 export default function ProductsGrid({ products = [] }) {
   return products.length > 0 ? (
-    <Container cellHeight="auto" cols={3}>
-      {renderGridTiles(products)}
-    </Container>
+    <div className="row">
+      <div className="grid">{renderGridTiles(products)}</div>
+    </div>
   ) : null;
 }
